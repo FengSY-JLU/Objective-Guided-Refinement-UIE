@@ -1,0 +1,185 @@
+{
+  "schema_version": "r27f9g3_final_dataset_profiles_v2",
+  "parent_protocol_sha256": "803129fb1b9f32ed3da1ab679aef6b0adecbce064ea180996fb0c8172e22756b",
+  "selection_amendment_v2_sha256": "2c58b5ac56b1d780746d032b92004ec264f89863992277c24ad413c699c9d001",
+  "expensive_characterization": {
+    "evidence_rows_sha256": "299538b7a26bdaa8c986d997b95e4efa3abf9261f66856441b957573ce92fd5f",
+    "pair_rows_sha256": "e29af74334a625e83150bd6218d9573d856f57c0fc0fd38564589ecdc4ef81bb",
+    "checkpoint_meta_sha256": "504bf3fa9a1353b0351cb1cfe9ea7c80b999b0cd59bb1539f6ba45b340b4a78a",
+    "recomputed": false
+  },
+  "selection_scope": "development-only dataset-level",
+  "evidence_definition": "V_k = H_k - I_s",
+  "probe_definition": "P_k = clip(I_s + 0.25 * V_k, 0, 1)",
+  "bank_size": 4,
+  "profiles": {
+    "UFO120": {
+      "anchor_id": "clahe__unsharp",
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "evidence_bank": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "msrcr"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "msrcr"
+      ],
+      "K": 4,
+      "selected_extras": [
+        "restormer_woruie",
+        "msrcr"
+      ],
+      "safe_non_anchor": [
+        "grayworld",
+        "msrcr",
+        "restormer_woruie"
+      ],
+      "double_nr_regression_non_anchor": [
+        "udcp",
+        "hdp"
+      ],
+      "selection_mode": "V1_NORMAL_SAFE_GREEDY",
+      "fallback_used": false,
+      "fixed_across_all_Q_modes": true,
+      "per_image_switching": false,
+      "q_specific_switching": false
+    },
+    "EUVP": {
+      "anchor_id": "clahe__unsharp",
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "evidence_bank": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "udcp"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "udcp"
+      ],
+      "K": 4,
+      "selected_extras": [
+        "restormer_woruie",
+        "udcp"
+      ],
+      "safe_non_anchor": [
+        "grayworld",
+        "udcp",
+        "msrcr",
+        "restormer_woruie"
+      ],
+      "double_nr_regression_non_anchor": [
+        "hdp"
+      ],
+      "selection_mode": "V1_NORMAL_SAFE_GREEDY",
+      "fallback_used": false,
+      "fixed_across_all_Q_modes": true,
+      "per_image_switching": false,
+      "q_specific_switching": false
+    },
+    "RUIE": {
+      "anchor_id": "clahe__msrcr",
+      "anchor_methods": [
+        "clahe",
+        "msrcr"
+      ],
+      "evidence_bank": [
+        "clahe",
+        "msrcr",
+        "unsharp",
+        "restormer_woruie"
+      ],
+      "slot_order": [
+        "clahe",
+        "msrcr",
+        "unsharp",
+        "restormer_woruie"
+      ],
+      "K": 4,
+      "selected_extras": [
+        "unsharp",
+        "restormer_woruie"
+      ],
+      "safe_non_anchor": [
+        "unsharp"
+      ],
+      "double_nr_regression_non_anchor": [
+        "grayworld",
+        "udcp",
+        "hdp",
+        "restormer_woruie"
+      ],
+      "selection_mode": "V2_FEASIBILITY_FALLBACK",
+      "fallback_used": true,
+      "fixed_across_all_Q_modes": true,
+      "per_image_switching": false,
+      "q_specific_switching": false
+    },
+    "OceanDark": {
+      "anchor_id": "clahe__unsharp",
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "evidence_bank": [
+        "clahe",
+        "unsharp",
+        "udcp",
+        "restormer_woruie"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "udcp",
+        "restormer_woruie"
+      ],
+      "K": 4,
+      "selected_extras": [
+        "udcp",
+        "restormer_woruie"
+      ],
+      "safe_non_anchor": [
+        "udcp"
+      ],
+      "double_nr_regression_non_anchor": [
+        "grayworld",
+        "msrcr",
+        "hdp",
+        "restormer_woruie"
+      ],
+      "selection_mode": "V2_FEASIBILITY_FALLBACK",
+      "fallback_used": true,
+      "fixed_across_all_Q_modes": true,
+      "per_image_switching": false,
+      "q_specific_switching": false
+    }
+  },
+  "global_contract": {
+    "anchors_frozen": true,
+    "evidence_banks_frozen": true,
+    "candidate_universe_frozen": true,
+    "K_fixed_to_4": true,
+    "fixed_across_all_Q_modes": true,
+    "per_image_switching": false,
+    "q_specific_switching": false,
+    "goal_primitives_used_for_selection": false,
+    "whole_image_G1B_NR_used_directly_for_selection": false,
+    "gt_used": false,
+    "hr_used": false,
+    "test_used": false,
+    "training_performed": false
+  },
+  "profile_state": "FULLY_FROZEN"
+}

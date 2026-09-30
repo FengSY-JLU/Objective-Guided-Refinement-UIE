@@ -1,0 +1,21 @@
+{
+  "dataset": "UFO120",
+  "checkpoint": "checkpoints/UFO120_OMRR_selected.pth",
+  "checkpoint_sha256": "d29a7eef27ac4c599894603f80eaaa6a781028e45da54cef694144a653a8cf59",
+  "objective_mode": "balanced",
+  "goal_kappa": 1.0,
+  "refinement_gamma": 0.25,
+  "anchor_methods": [
+    "clahe",
+    "unsharp"
+  ],
+  "slot_order": [
+    "clahe",
+    "unsharp",
+    "restormer_woruie",
+    "msrcr"
+  ],
+  "selected_epoch": 200,
+  "seed": 3407,
+  "restormer_weight_sha256": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c"
+}

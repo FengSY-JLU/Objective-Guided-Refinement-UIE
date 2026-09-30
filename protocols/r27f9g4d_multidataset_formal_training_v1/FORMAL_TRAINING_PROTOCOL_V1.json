@@ -1,0 +1,108 @@
+{
+  "schema_version": "r27f9g4d_multidataset_formal_training_v1",
+
+  "scientific_identity": "restoration-output-guided objective refinement",
+
+  "profile": {
+    "path": "audits/r27f9g3_post_synthesis_evidence_v2/FINAL_DATASET_PROFILES_V2.json",
+    "sha256": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+    "state": "FULLY_FROZEN",
+    "bank_fixed_across_Q": true,
+    "per_image_switching": false,
+    "q_specific_switching": false
+  },
+
+  "preflight_provenance": {
+    "g4b_report_sha256": "99cd7dbbcb29e7a4bf2b207aa1fa1baf71175870382f40d79ca265d7639a989e",
+    "g4c_report_sha256": "da636a6984cefaa147b947a7b6d5ee94fdea32b24fc64afe65891835920d1618"
+  },
+
+  "formal_training": {
+    "epochs": 200,
+    "batch_size": 1,
+    "patch_size": 128,
+    "seed": 3407,
+    "num_workers": 4,
+
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+
+    "scheduler": "MultiStepLR",
+    "scheduler_milestones": [100],
+    "scheduler_gamma": 0.5,
+
+    "objective_mode": "balanced",
+    "goal_kappa": 1.0,
+    "goal_objective_weight": 0.020,
+    "proposal_support_weight": 0.0,
+
+    "router_backend": "sorr_v1",
+    "router_mode": "direct_objective",
+    "refinement_gamma": 0.25,
+
+    "trainable_parameter_count": 11906,
+
+    "fresh_router_initialization": true,
+    "pilot_checkpoint_used_as_warmstart": false,
+
+    "save_every_epochs": 10,
+    "formal_checkpoint_epochs": [
+      10,20,30,40,50,60,70,80,90,100,
+      110,120,130,140,150,160,170,180,190,200
+    ],
+
+    "online_validation_during_training": false,
+
+    "test_used_during_training": false,
+    "gt_used_for_training": false,
+    "hr_used_for_training": false
+  },
+
+  "datasets": {
+    "UFO120": {
+      "train_count": 1345,
+      "val_count": 150,
+      "train_manifest": "protocols/r27f8d_ufo120_split_geometry_v1/ufo120_train_split_v1.csv",
+      "val_manifest": "protocols/r27f8d_ufo120_split_geometry_v1/ufo120_val_split_v1.csv",
+      "development_root": "Dataset/UIE/UFO120/train_val/lrd",
+      "anchor": ["clahe","unsharp"],
+      "bank": ["clahe","unsharp","restormer_woruie","msrcr"]
+    },
+
+    "EUVP": {
+      "train_count": 3330,
+      "val_count": 370,
+      "train_manifest": "protocols/r27f9c_multidataset_split_v1/euvp_train_v1.csv",
+      "val_manifest": "protocols/r27f9c_multidataset_split_v1/euvp_val_v1.csv",
+      "anchor": ["clahe","unsharp"],
+      "bank": ["clahe","unsharp","restormer_woruie","udcp"]
+    },
+
+    "RUIE": {
+      "train_count": 2700,
+      "val_count": 300,
+      "train_manifest": "protocols/r27f9c_multidataset_split_v1/ruie_train_v1.csv",
+      "val_manifest": "protocols/r27f9c_multidataset_split_v1/ruie_val_v1.csv",
+      "anchor": ["clahe","msrcr"],
+      "bank": ["clahe","msrcr","unsharp","restormer_woruie"]
+    },
+
+    "OceanDark": {
+      "train_count": 109,
+      "val_count": 37,
+      "train_manifest": "protocols/r27f9c_multidataset_split_v1/oceandark_train_v1.csv",
+      "val_manifest": "protocols/r27f9c_multidataset_split_v1/oceandark_val_v1.csv",
+      "anchor": ["clahe","unsharp"],
+      "bank": ["clahe","unsharp","udcp","restormer_woruie"]
+    }
+  },
+
+  "scientific_guards": {
+    "anchor_selection_reopened": false,
+    "evidence_bank_selection_reopened": false,
+    "K_reopened": false,
+    "training_horizon_reopened": false,
+    "objective_weight_reopened": false,
+    "test_access_before_checkpoint_freeze": false
+  }
+}

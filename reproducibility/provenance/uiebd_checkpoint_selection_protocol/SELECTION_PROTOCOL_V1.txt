@@ -1,0 +1,32 @@
+R27F4A_FORMAL_CHECKPOINT_SELECTION_PROTOCOL_V1
+freeze_time=2026-09-12T11:18:39+08:00
+
+run=R27FORMAL_UIEBD_CRUG_OMRR_B025_W0020_S3407
+candidate_epochs=10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200
+candidate_count=20
+selection_split=val70
+test190_used=false
+
+selection_objective=balanced
+beta=0.25
+goal_kappa=1.0
+
+HARD_GUARDS:
+goal_utility_CI_lo > 0
+delta_PSNR >= -0.50
+delta_SSIM >= -0.010
+delta_LPIPS <= +0.010
+NOT(UIQM paired 95% CI entirely <0 AND UCIQE paired 95% CI entirely <0)
+z_chroma_q95 <= 0.25
+z_chroma_max <= 1.00
+z_clip_q95 <= 0.25
+z_clip_max <= 1.00
+
+SELECTION_RULE:
+among all surviving checkpoints choose maximum mean balanced Goal-V4 utility
+exact tie -> higher PSNR -> higher SSIM -> lower LPIPS -> earlier epoch
+
+bootstrap_seed=3407
+bootstrap_replicates=10000
+
+PASS_R27F4A_SELECTION_PROTOCOL_FREEZE_V1

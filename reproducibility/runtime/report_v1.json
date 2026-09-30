@@ -1,0 +1,93 @@
+{
+  "schema": "r27f11a_runtime_efficiency_v1",
+  "population": "UIEBD_val70",
+  "test190_used": false,
+  "training": false,
+  "checkpoint_reselection": false,
+  "source_checkpoint": "checkpoints/R27FORMAL_UIEBD_CRUG_OMRR_B025_W0020_S3407/model_epoch_200.pth",
+  "source_checkpoint_sha256": "2e412ffeadd1bcbae3fa54ebf441ee85ef218f0e58e61c595e118674f233bbe2",
+  "core_checkpoint": "checkpoints/r27f6_pnp_core_v1/omrr_core_from_e200_v1.pth",
+  "core_checkpoint_sha256": "7c256fa0ac429bc21123927be516cac086c7307ed28b3ee4e56f38e663b8bdc3",
+  "router_parameter_count": 11906,
+  "whole_model_trainable_count": 11906,
+  "hardware": {
+    "gpu": "NVIDIA A40",
+    "device": "cuda:0",
+    "torch": "2.7.1+cu118",
+    "cuda": "11.8",
+    "python": "3.13.0"
+  },
+  "timing_protocol": {
+    "batch_size": 1,
+    "resolution": [
+      256,
+      256
+    ],
+    "cached_real_val_sources": 4,
+    "core_warmup": 50,
+    "core_repetitions": 300,
+    "full_k4_warmup": 10,
+    "full_k4_repetitions": 50,
+    "synchronization": "torch.cuda.synchronize before/after each timed forward",
+    "core_scope": "cached restoration outputs -> OMRR + bounded execution",
+    "formal_k4_scope": "formal restoration bank generation + anchor + OMRR",
+    "K5_core_only_note": "identity_technical fifth tensor; runtime/cardinality measurement only"
+  },
+  "results": [
+    {
+      "scope": "core_only",
+      "K": 2,
+      "mean_ms": 11.936716682588061,
+      "std_ms": 0.5107166595918243,
+      "median_ms": 11.76909590139985,
+      "p95_ms": 12.924424186348915,
+      "min_ms": 11.673680506646633,
+      "max_ms": 17.006559297442436,
+      "n": 300
+    },
+    {
+      "scope": "core_only",
+      "K": 3,
+      "mean_ms": 15.467361668124795,
+      "std_ms": 0.1534924095792375,
+      "median_ms": 15.44598676264286,
+      "p95_ms": 15.597673924639821,
+      "min_ms": 15.336544252932072,
+      "max_ms": 16.958490014076233,
+      "n": 300
+    },
+    {
+      "scope": "core_only",
+      "K": 4,
+      "mean_ms": 19.15316389252742,
+      "std_ms": 0.41404365066799514,
+      "median_ms": 19.031275063753128,
+      "p95_ms": 20.098498882725835,
+      "min_ms": 18.97081732749939,
+      "max_ms": 22.33224082738161,
+      "n": 300
+    },
+    {
+      "scope": "core_only",
+      "K": 5,
+      "mean_ms": 22.784683043137193,
+      "std_ms": 0.4602840132892146,
+      "median_ms": 22.66994910314679,
+      "p95_ms": 23.09410758316517,
+      "min_ms": 22.5517600774765,
+      "max_ms": 26.264206506311893,
+      "n": 300
+    },
+    {
+      "scope": "formal_k4_end_to_end",
+      "K": 4,
+      "mean_ms": 126.58072980120778,
+      "std_ms": 0.8183445778294101,
+      "median_ms": 126.3817367143929,
+      "p95_ms": 128.1977470498532,
+      "min_ms": 125.62709487974644,
+      "max_ms": 129.79731615632772,
+      "n": 50
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "method_count": 9,
+  "interpretation": "descriptive method-level association; not a held-out significance claim",
+  "frozen_canonical_uciqe_vs_reachability": {
+    "pearson": 0.9332191171079782,
+    "spearman": 0.9166666666666666
+  },
+  "recomputed_uciqe_vs_reachability": {
+    "pearson": 0.933219116387014,
+    "spearman": 0.9166666666666666
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "schema": "r27f10d_sourcewise_reachability_realization_v1",
+  "population": "RUIE_test630",
+  "analysis_type": "post_hoc_mechanistic_stress_test",
+  "held_out_generalization_claim": false,
+  "purpose": "Test whether source-wise bounded UCIQE reachability of an external restoration output aligns with the realized UCIQE change after frozen fixed-rho K5 routing.",
+  "inputs": {
+    "reachability_report": "../reachability/report_v1.json",
+    "b1_per_source": "../reachability/b1_external_response_per_source_v1.csv",
+    "b2_per_source": "../reachability/b2_fixed_rho_k5_per_source_v1.csv",
+    "panel_freeze": "not redistributed; fixed three-method panel is recorded below"
+  },
+  "frozen_panel": {
+    "median_control": "HSRUIE",
+    "mild_positive": "Water-Net",
+    "high_target": "TACL"
+  },
+  "sourcewise_question": "Does a more beneficial post-synthesis correction direction on the same source translate into a more beneficial realized K5 output under the frozen router?",
+  "primary_sourcewise_metrics": [
+    "reach_realized_pearson",
+    "reach_realized_spearman",
+    "conditional_realization_contrast",
+    "sign_agreement_fraction",
+    "positive_realization_given_positive_reach",
+    "nonpositive_realization_given_nonpositive_reach"
+  ],
+  "secondary_router_diagnostic": [
+    "reach_weight_pearson",
+    "reach_weight_spearman",
+    "delta_w5_positive_minus_nonpositive_reach"
+  ],
+  "bootstrap": {
+    "base_seed": 3407,
+    "reps": 5000,
+    "interpretation": "descriptive paired source-level uncertainty; not confirmatory inference",
+    "details": {
+      "HSRUIE": {
+        "seed": 3407,
+        "reps": 5000,
+        "pearson_ci95": [
+          0.6850443815863273,
+          0.833286467242827
+        ],
+        "spearman_ci95": [
+          0.42908340887238844,
+          0.5653219729429012
+        ],
+        "conditional_realization_contrast_ci95": [
+          0.08809579534619619,
+          0.18071969525812032
+        ]
+      },
+      "Water-Net": {
+        "seed": 3408,
+        "reps": 5000,
+        "pearson_ci95": [
+          0.5635236017332058,
+          0.6470112840793115
+        ],
+        "spearman_ci95": [
+          0.5893948174010005,
+          0.6827141307313923
+        ],
+        "conditional_realization_contrast_ci95": [
+          0.1158341205552335,
+          0.15036215276127188
+        ]
+      },
+      "TACL": {
+        "seed": 3409,
+        "reps": 5000,
+        "pearson_ci95": [
+          0.46086456840513806,
+          0.5702126205877348
+        ],
+        "spearman_ci95": [
+          0.4712261116519858,
+          0.5862214944862842
+        ],
+        "conditional_realization_contrast_ci95": [
+          0.09165608011950076,
+          0.1313026380276417
+        ]
+      }
+    }
+  },
+  "method_results": [
+    {
+      "role": "median_control",
+      "method": "HSRUIE",
+      "n": 630,
+      "reach_mean": -1.0282709523809523,
+      "realized_mean": -0.21769714285714278,
+      "reach_positive_fraction": 0.06825396825396825,
+      "realized_positive_fraction": 0.05396825396825397,
+      "reach_realized_pearson": 0.7681754311665014,
+      "reach_realized_pearson_ci95_lo": 0.6850443815863273,
+      "reach_realized_pearson_ci95_hi": 0.833286467242827,
+      "reach_realized_spearman": 0.5014423132067093,
+      "reach_realized_spearman_ci95_lo": 0.42908340887238844,
+      "reach_realized_spearman_ci95_hi": 0.5653219729429012,
+      "sign_agreement_fraction": 0.919047619047619,
+      "positive_realization_given_positive_reach": 0.3023255813953488,
+      "nonpositive_realization_given_nonpositive_reach": 0.9642248722316865,
+      "mean_realized_given_positive_reach": -0.09185116279069751,
+      "mean_realized_given_nonpositive_reach": -0.22691584327086878,
+      "conditional_realization_contrast": 0.13506468048017128,
+      "conditional_realization_contrast_ci95_lo": 0.08809579534619619,
+      "conditional_realization_contrast_ci95_hi": 0.18071969525812032,
+      "reach_weight_pearson": -0.06596409987072697,
+      "reach_weight_spearman": -0.18293490421006167,
+      "mean_w5_given_positive_reach": 0.17068424101832302,
+      "mean_w5_given_nonpositive_reach": 0.16427844664434152,
+      "delta_w5_positive_minus_nonpositive_reach": 0.006405794373981505
+    },
+    {
+      "role": "mild_positive",
+      "method": "Water-Net",
+      "n": 630,
+      "reach_mean": -0.13307253968253963,
+      "realized_mean": -0.07330984126984122,
+      "reach_positive_fraction": 0.36507936507936506,
+      "realized_positive_fraction": 0.22698412698412698,
+      "reach_realized_pearson": 0.6056598979674989,
+      "reach_realized_pearson_ci95_lo": 0.5635236017332058,
+      "reach_realized_pearson_ci95_hi": 0.6470112840793115,
+      "reach_realized_spearman": 0.6393335219224445,
+      "reach_realized_spearman_ci95_lo": 0.5893948174010005,
+      "reach_realized_spearman_ci95_hi": 0.6827141307313923,
+      "sign_agreement_fraction": 0.7793650793650794,
+      "positive_realization_given_positive_reach": 0.508695652173913,
+      "nonpositive_realization_given_nonpositive_reach": 0.935,
+      "mean_realized_given_positive_reach": 0.01130347826086962,
+      "mean_realized_given_nonpositive_reach": -0.12196249999999993,
+      "conditional_realization_contrast": 0.13326597826086956,
+      "conditional_realization_contrast_ci95_lo": 0.1158341205552335,
+      "conditional_realization_contrast_ci95_hi": 0.15036215276127188,
+      "reach_weight_pearson": -0.19031540408271408,
+      "reach_weight_spearman": -0.1927905510895041,
+      "mean_w5_given_positive_reach": 0.22356184518531613,
+      "mean_w5_given_nonpositive_reach": 0.2633218236733228,
+      "delta_w5_positive_minus_nonpositive_reach": -0.039759978488006664
+    },
+    {
+      "role": "high_target",
+      "method": "TACL",
+      "n": 630,
+      "reach_mean": 0.4074392063492064,
+      "realized_mean": 0.045643015873015884,
+      "reach_positive_fraction": 0.8126984126984127,
+      "realized_positive_fraction": 0.6285714285714286,
+      "reach_realized_pearson": 0.5174213133660567,
+      "reach_realized_pearson_ci95_lo": 0.46086456840513806,
+      "reach_realized_pearson_ci95_hi": 0.5702126205877348,
+      "reach_realized_spearman": 0.5307219653304432,
+      "reach_realized_spearman_ci95_lo": 0.4712261116519858,
+      "reach_realized_spearman_ci95_hi": 0.5862214944862842,
+      "sign_agreement_fraction": 0.7206349206349206,
+      "positive_realization_given_positive_reach": 0.71484375,
+      "nonpositive_realization_given_nonpositive_reach": 0.7457627118644068,
+      "mean_realized_given_positive_reach": 0.06646640624999998,
+      "mean_realized_given_nonpositive_reach": -0.044709322033898186,
+      "conditional_realization_contrast": 0.11117572828389817,
+      "conditional_realization_contrast_ci95_lo": 0.09165608011950076,
+      "conditional_realization_contrast_ci95_hi": 0.1313026380276417,
+      "reach_weight_pearson": 0.16366260140575953,
+      "reach_weight_spearman": 0.1723333380884524,
+      "mean_w5_given_positive_reach": 0.19344853229267756,
+      "mean_w5_given_nonpositive_reach": 0.17122782893100028,
+      "delta_w5_positive_minus_nonpositive_reach": 0.02222070336167728
+    }
+  ],
+  "pooled_descriptive": {
+    "row_count": 1890,
+    "method_count": 3,
+    "source_count_per_method": 630,
+    "raw_pooled_pearson": 0.7690620906543054,
+    "raw_pooled_spearman": 0.7259413342025443,
+    "pooled_sign_agreement_fraction": 0.8063492063492064,
+    "macro_mean_method_pearson": 0.6304188808333523,
+    "macro_mean_method_spearman": 0.5571659334865324
+  },
+  "scientific_guards": {
+    "new_inference": false,
+    "new_training": false,
+    "new_model_selection": false,
+    "panel_reselection": false,
+    "parameter_tuning": false,
+    "test_already_opened": true,
+    "claim_scope": "post-hoc mechanism analysis only"
+  }
+}

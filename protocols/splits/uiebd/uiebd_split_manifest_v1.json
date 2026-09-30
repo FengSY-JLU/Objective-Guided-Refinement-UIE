@@ -1,0 +1,47 @@
+{
+  "schema_version": "task_safe_uie_uiebd_split_v1_public_sanitized_v1",
+  "dataset_root": "<USER_PROVIDED_UIEBD_ROOT>",
+  "seed": 20260803,
+  "validation_fraction_requested": 0.1,
+  "original_train_pair_count": 700,
+  "original_test_pair_count": 190,
+  "excluded_cross_test_pair_count": 4,
+  "development_train_pair_count": 626,
+  "development_validation_pair_count": 70,
+  "test_pair_count": 190,
+  "pair_duplicate_groups_kept_in_single_fold": true,
+  "test_used_for_model_selection": false,
+  "path_sanitization": "input_path/target_path made relative; sample membership and image hashes unchanged",
+  "outputs": {
+    "uiebd_pair_catalog_v1.csv": {
+      "path": "uiebd_pair_catalog_v1.csv",
+      "public_sha256": "47c79983d5a422b672b0768cdc62f9f5c7a70cf6e6a1e2ee968ba08766dae375",
+      "source_original_sha256": "94d315582ca2c9dd9c415c07c411d2dddda34f3b519ddbbd7dfa2c7f20b386f1",
+      "size_bytes": 222642
+    },
+    "uiebd_train_split_v1.csv": {
+      "path": "uiebd_train_split_v1.csv",
+      "public_sha256": "f01e71883cae84f59fe9ffdc2f14256687d0389173323356b09b8f7b5df51eb2",
+      "source_original_sha256": "2b269f41e9d08dd680d3559da649e7661c42342b48ef06351b1216f1cc93b511",
+      "size_bytes": 157571
+    },
+    "uiebd_val_split_v1.csv": {
+      "path": "uiebd_val_split_v1.csv",
+      "public_sha256": "5193a0bd6d5371dd58acf57109974e9a960440ff7a5ca8e21a15f4629c827ea6",
+      "source_original_sha256": "5aa81e09f266ba716cb442873390fbf82c895f8b7830c3ec825c164e1c5d27da",
+      "size_bytes": 18055
+    },
+    "uiebd_test_split_v1.csv": {
+      "path": "uiebd_test_split_v1.csv",
+      "public_sha256": "4bccb748c8b4c544ad8f545eadc3bf12fb1732b87372aa0b2bba40e7b044e2d8",
+      "source_original_sha256": "8f4bef863d78d6a1a74e0e1cc10fca42d838164c72ccc9976c4037eb212d620f",
+      "size_bytes": 47224
+    },
+    "uiebd_excluded_cross_test_duplicates_v1.csv": {
+      "path": "uiebd_excluded_cross_test_duplicates_v1.csv",
+      "public_sha256": "95cf2b067dafe1382782bb8c24daefb12da1c4491d886f1d13c82b3fb83a0977",
+      "source_original_sha256": "b848ddca32d4887964c3657ed70bd40659cab155b8cf6cc3b9d02d7676d1e4f7",
+      "size_bytes": 1294
+    }
+  }
+}

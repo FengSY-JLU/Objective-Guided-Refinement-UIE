@@ -1,0 +1,21 @@
+{
+  "dataset": "EUVP",
+  "checkpoint": "checkpoints/EUVP_OMRR_selected.pth",
+  "checkpoint_sha256": "af5deed0d43ba533c564b2c9c9694bf0b4fa4d64fc29e9c8edfff56af0f99a28",
+  "objective_mode": "balanced",
+  "goal_kappa": 1.0,
+  "refinement_gamma": 0.25,
+  "anchor_methods": [
+    "clahe",
+    "unsharp"
+  ],
+  "slot_order": [
+    "clahe",
+    "unsharp",
+    "restormer_woruie",
+    "udcp"
+  ],
+  "selected_epoch": 200,
+  "seed": 3407,
+  "restormer_weight_sha256": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c"
+}

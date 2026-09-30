@@ -1,0 +1,59 @@
+{
+  "schema_version": "r27f9g4d_formal_package_freeze_v1",
+  "status": "FROZEN_BEFORE_FORMAL_TRAINING",
+  "files": {
+    "formal_training_protocol": "77bfe759bf0a2f3ed2cdb55ea259fd611262f093492d21a5ddaa3773a2b3821d",
+    "val_selection_protocol": "39f51986e07390c99f025141464824c62ad45171b4d496de0a5b3fa7738bd82b",
+    "formal_trainer": "1c8efb04ab45b24f32b4977da58c1e028c65ff6986e4b85d411f209029447956",
+    "master_launcher": "39752a1088ca1b395e0e50625c0d3e5ac5d795f83fd2ef00422570d2c8bd91cd",
+    "final_dataset_profiles": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+    "g4b_report": "99cd7dbbcb29e7a4bf2b207aa1fa1baf71175870382f40d79ca265d7639a989e",
+    "g4c_report": "da636a6984cefaa147b947a7b6d5ee94fdea32b24fc64afe65891835920d1618",
+    "losses_canonical": "642b4b499cfa6f02bf56de6c2c167a99d5cbfec8c6057c759895477843a99de9",
+    "pnp_network": "3fb1725b4d13d89730f4764f4f50ec3fa3009d3a45a34553acef5408809f7040",
+    "contributor_bank": "d0bc37ff0bad83caf8b32d44cb8e8fafc4de79d9cff46b8310b2a02c0429e693",
+    "anchor_policy": "9e84e9a493ec7367bd2bd6c0d680bc0dcfb2670f5304e5a8820c96560117aa77",
+    "omrr_core": "5a05de6af624de36417412792cc819dc0eb37c3055fe54d42655da1a8d457650",
+    "pnp_checkpoint": "f3deabc46695f42f01e63854f413201dcccf3d15c3f0ca27ca623e95a26dd7fd",
+    "priors": "1acbf97e3d19f43a92eecfa58a6e6f5bcb2843da440c146fff1b540c4669a9e7",
+    "restormer": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c"
+  },
+  "formal_jobs": [
+    "UFO120",
+    "EUVP",
+    "RUIE",
+    "OceanDark"
+  ],
+  "execution_resource": {
+    "physical_gpu": 1,
+    "execution_mode": "serial",
+    "scientific_role": "none"
+  },
+  "seed": 3407,
+  "epochs": 200,
+  "formal_checkpoint_candidates": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200
+  ],
+  "test_used": false,
+  "profile_reopened": false,
+  "training_protocol_reopened": false
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "r27f10c_external_evidence_response_v1",
+  "population": "RUIE_test630",
+  "analysis_type": "post_hoc_mechanistic_stress_test",
+  "held_out_generalization_claim": false,
+  "n": 630,
+  "technical_limit": null,
+  "formal_metric_consistency": {
+    "checked": true,
+    "tolerance": 0.0005,
+    "k4_uiqm_abs_diff": 5.269841269583964e-06,
+    "k4_uciqe_abs_diff": 0.00014541269841217286,
+    "external_uciqe_max_abs_diff": 4.1269841233315674e-07,
+    "external_uciqe_max_abs_diff_method": "TACL",
+    "pass": true
+  },
+  "broad_pool": [
+    "IBLA",
+    "HFM",
+    "Water-Net",
+    "SemiUIR",
+    "DiffWater",
+    "DDIP",
+    "TACL",
+    "HSRUIE",
+    "FMFD"
+  ],
+  "b2_panel": {
+    "high_target": "TACL",
+    "mild_positive": "Water-Net",
+    "median_control": "HSRUIE"
+  },
+  "fixed": {
+    "anchor": [
+      "clahe",
+      "msrcr"
+    ],
+    "k4_bank": [
+      "clahe",
+      "msrcr",
+      "unsharp",
+      "restormer_woruie"
+    ],
+    "checkpoint_epoch": 190,
+    "checkpoint_sha256": "47d606e7083023c83152682469bf470020f28af89e0a6bbd88fcef2169c29a56",
+    "objective": "balanced",
+    "router_mode": "direct_objective",
+    "gamma": 0.25,
+    "k5_trust_radius": "rho_K4_only",
+    "goal_measurement_support": "frozen_K4_priors",
+    "model_tensor_color_space": "linear_RGB",
+    "external_artifact_color_space": "sRGB",
+    "external_injection_conversion": "sRGB_to_linear_RGB",
+    "nr_metric_color_space": "sRGB",
+    "nr_metric_conversion": "linear_RGB_to_sRGB",
+    "route_active_eps": 0.05
+  },
+  "k4_exactness": {
+    "checked_sources": 10,
+    "max_abs_error": 0.0,
+    "pass": true
+  },
+  "k4_reference": {
+    "mean_uiqm": 3.9860887301587304,
+    "mean_uciqe": 27.069611587301587,
+    "mean_goal_utility": 0.1140854004238333,
+    "historical_official_uiqm": 3.986094,
+    "historical_official_uciqe": 27.069757
+  },
+  "b1_method_correlation": {
+    "method_count": 9,
+    "interpretation": "descriptive method-level association; not a held-out significance claim",
+    "frozen_canonical_uciqe_vs_reachability": {
+      "pearson": 0.9332191171079782,
+      "spearman": 0.9166666666666666
+    },
+    "recomputed_uciqe_vs_reachability": {
+      "pearson": 0.933219116387014,
+      "spearman": 0.9166666666666666
+    }
+  },
+  "bootstrap_seed": 3407,
+  "bootstrap_reps": 10000,
+  "artifact_hashes": {
+    "cache_manifest": "3104a91bbfdba67eba4e161e87330b53f33d71d3003dba1892ebb2fc72c499f9",
+    "test_semantics": "75f8cddb07db37ae499187f206d231f3f23eea6297b66ef94eecfdcee3ded417",
+    "panel_freeze": "f9aeba08625a65e9b887f114428bf62ae74a6058cb621fea1dec481615976ca5",
+    "b1_per_source": "eccacac31c38b7d6fac257dcccf9e31b4ccf7c82c0e795c04401beafefab5a9e",
+    "b1_summary": "1c9e8a0b60f89f25a863f803cd3af00af04fb3b64322283f772fff899d6bb924",
+    "b1_correlation": "812d5dc07f8af588679e89fdf2773a4fa4db4b1d79b0e847c26e70204e1e19fc",
+    "b2_per_source": "3a0846258806166c8f6620c5c80ef6632c2773ab7cdad4dce279ea61ae7c6ddb",
+    "b2_summary": "9d9eaa917060f3d37ea497f76b420e08a61784a6c5c864c7d67ff2b72bea06df",
+    "k4_reference_per_source": "5d2226e3286f2a483e68b9d9d2fba5eb500dcd709219ab08e3254e9c2806848e"
+  }
+}

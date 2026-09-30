@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated paper."
+title: "OGRR-UIE: Objective-Guided Refinement from Restoration Outputs for Self-Supervised Underwater Image Enhancement"
+type: software
+authors:
+  - family-names: Feng
+    given-names: Shiyao
+  - family-names: Cui
+    given-names: Jun-Hong
+  - family-names: Wan
+    given-names: ChunRu
+  - family-names: Xu
+    given-names: Gaochao
+year: 2026
+license: MIT
+repository-code: "https://github.com/FengSY-JLU/Objective-Guided-Refinement-UIE"
+url: "https://github.com/FengSY-JLU/Objective-Guided-Refinement-UIE"

@@ -1,0 +1,37 @@
+{
+  "release_candidate": "public_release_final",
+  "paper_title": "Objective-Guided Refinement from Restoration Outputs for Self-Supervised Underwater Image Enhancement",
+  "omrr_checkpoints_included": 5,
+  "omrr_parameter_count_each": 11906,
+  "restormer_prior_included": false,
+  "restormer_prior_expected_sha256": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c",
+  "open_items_before_public_push": [
+    "create/push the GitHub repository at the frozen repository URL",
+    "confirm the Google Drive prior is shared as Anyone with the link / Viewer",
+    "optionally rerun the documented end-to-end smoke test after cloning from GitHub"
+  ],
+  "sanitization": {
+    "uiebd_split_paths": "relative",
+    "machine_local_completion_records_removed": true,
+    "mechanism_path_metadata": "relative",
+    "frozen_formal_trainer_byte_preserved": true
+  },
+  "validation_completed": [
+    "5 OMRR checkpoint SHA/format/tensor-count/parameter-count contract",
+    "synthetic core forward smoke test",
+    "Python compilation of public entrypoints/core modules",
+    "frozen formal trainer/protocol/profile SHA provenance check",
+    "real end-to-end UIEBD formal-bank inference with exact Restormer prior"
+  ],
+  "real_end_to_end_smoke_passed": true,
+  "remaining_absolute_path_hits": {
+    "count": 3,
+    "scope": "checksum-frozen formal trainer only",
+    "reason": "byte-for-byte provenance; public tools/train.py overrides local dataset roots"
+  },
+  "repository": "https://github.com/FengSY-JLU/Objective-Guided-Refinement-UIE",
+  "project_shorthand": "OGRR-UIE",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Shiyao Feng",
+  "restormer_prior_download_url": "https://drive.google.com/file/d/1Blm76DUeL-MAgOYJzUYlvgzwBBVThNTE/view?usp=drive_link"
+}

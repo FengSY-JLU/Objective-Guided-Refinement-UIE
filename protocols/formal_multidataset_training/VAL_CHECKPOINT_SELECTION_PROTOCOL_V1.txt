@@ -1,0 +1,60 @@
+R27F9-G4D MULTIDATASET VAL CHECKPOINT SELECTION PROTOCOL V1
+
+CANDIDATES:
+epoch = 10,20,30,...,200
+
+SELECTION SPLIT:
+dataset-specific frozen validation split only
+
+TEST USED:
+false
+
+PRIMARY OBJECTIVE:
+balanced Goal-V4
+gamma = 0.25
+goal_kappa = 1.0
+
+REFERENCE FOR DELTAS:
+the dataset's frozen synthesis anchor I_s
+
+HARD GUARDS:
+1. paired-bootstrap 95% CI lower bound of balanced Goal-V4 utility > 0
+
+2. reject when BOTH canonical NR metrics show paired 95% CI
+   entirely below zero:
+   NOT(
+       UIQM paired 95% CI entirely < 0
+       AND
+       UCIQE paired 95% CI entirely < 0
+   )
+
+3. z_chroma_q95 <= 0.25
+4. z_chroma_max <= 1.00
+5. z_clip_q95 <= 0.25
+6. z_clip_max <= 1.00
+
+SELECTION:
+among surviving checkpoints:
+maximum mean balanced Goal-V4 utility
+
+EXACT TIEBREAK:
+1. higher mean delta UIQM
+2. higher mean delta UCIQE
+3. earlier epoch
+
+BOOTSTRAP:
+seed = 3407
+replicates = 10000
+
+NO-SURVIVOR POLICY:
+NO_GO for that dataset.
+Do not access test and do not invent a fallback checkpoint.
+Any protocol amendment would have to be explicit and prospective.
+
+GT/HR:
+not used for checkpoint selection
+
+TEST ACCESS:
+only after the selected checkpoint is formally frozen.
+
+PASS_R27F9G4D_VAL_SELECTION_PROTOCOL_FREEZE_V1

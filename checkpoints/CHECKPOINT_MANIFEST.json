@@ -1,0 +1,169 @@
+{
+  "UIEBD": {
+    "file": "UIEBD_OMRR_selected.pth",
+    "bytes": 51821,
+    "sha256": "1ba5a50f78584ce054f8ad5f10c6a11c517f30fdc2765d5f18ea36a5bb767943",
+    "format": "r27_pnp_omrr_core_v1",
+    "tensor_count": 7,
+    "parameter_count": 11906,
+    "metadata": {
+      "core_parameter_count": 11906,
+      "external_contributors_included": false,
+      "contributor_cardinality_specific": false,
+      "dataset": "UIEBD",
+      "epoch": 200,
+      "seed": 3407,
+      "objective_mode": "balanced",
+      "goal_objective_weight": 0.02,
+      "refinement_gamma": 0.25,
+      "anchor_methods": [
+        "clahe",
+        "restormer_woruie"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "grayworld",
+        "restormer_woruie"
+      ],
+      "test_used": false,
+      "formal_training": true,
+      "source_full_checkpoint_sha256": "2e412ffeadd1bcbae3fa54ebf441ee85ef218f0e58e61c595e118674f233bbe2",
+      "audited_core_checkpoint_sha256": "7c256fa0ac429bc21123927be516cac086c7307ed28b3ee4e56f38e663b8bdc3",
+      "audited_core_exact_tensor_roundtrip": true,
+      "serialization_note": "Exact audited UIEBD OMRR tensors repacked into r27_pnp_omrr_core_v1 release format."
+    }
+  },
+  "UFO120": {
+    "file": "UFO120_OMRR_selected.pth",
+    "bytes": 51641,
+    "sha256": "d29a7eef27ac4c599894603f80eaaa6a781028e45da54cef694144a653a8cf59",
+    "format": "r27_pnp_omrr_core_v1",
+    "tensor_count": 7,
+    "parameter_count": 11906,
+    "metadata": {
+      "core_parameter_count": 11906,
+      "external_contributors_included": false,
+      "contributor_cardinality_specific": false,
+      "dataset": "UFO120",
+      "epoch": 200,
+      "seed": 3407,
+      "protocol_sha256": "77bfe759bf0a2f3ed2cdb55ea259fd611262f093492d21a5ddaa3773a2b3821d",
+      "profile_sha256": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+      "objective_mode": "balanced",
+      "goal_objective_weight": 0.02,
+      "refinement_gamma": 0.25,
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "msrcr"
+      ],
+      "test_used": false,
+      "formal_training": true
+    }
+  },
+  "RUIE": {
+    "file": "RUIE_OMRR_selected.pth",
+    "bytes": 51641,
+    "sha256": "47d606e7083023c83152682469bf470020f28af89e0a6bbd88fcef2169c29a56",
+    "format": "r27_pnp_omrr_core_v1",
+    "tensor_count": 7,
+    "parameter_count": 11906,
+    "metadata": {
+      "core_parameter_count": 11906,
+      "external_contributors_included": false,
+      "contributor_cardinality_specific": false,
+      "dataset": "RUIE",
+      "epoch": 190,
+      "seed": 3407,
+      "protocol_sha256": "77bfe759bf0a2f3ed2cdb55ea259fd611262f093492d21a5ddaa3773a2b3821d",
+      "profile_sha256": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+      "objective_mode": "balanced",
+      "goal_objective_weight": 0.02,
+      "refinement_gamma": 0.25,
+      "anchor_methods": [
+        "clahe",
+        "msrcr"
+      ],
+      "slot_order": [
+        "clahe",
+        "msrcr",
+        "unsharp",
+        "restormer_woruie"
+      ],
+      "test_used": false,
+      "formal_training": true
+    }
+  },
+  "OceanDark": {
+    "file": "OceanDark_OMRR_selected.pth",
+    "bytes": 51641,
+    "sha256": "8750f9c016484ef209390968d9ae15fa202c6027a9eb635c0dc96f930fbf0e95",
+    "format": "r27_pnp_omrr_core_v1",
+    "tensor_count": 7,
+    "parameter_count": 11906,
+    "metadata": {
+      "core_parameter_count": 11906,
+      "external_contributors_included": false,
+      "contributor_cardinality_specific": false,
+      "dataset": "OceanDark",
+      "epoch": 200,
+      "seed": 3407,
+      "protocol_sha256": "77bfe759bf0a2f3ed2cdb55ea259fd611262f093492d21a5ddaa3773a2b3821d",
+      "profile_sha256": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+      "objective_mode": "balanced",
+      "goal_objective_weight": 0.02,
+      "refinement_gamma": 0.25,
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "udcp",
+        "restormer_woruie"
+      ],
+      "test_used": false,
+      "formal_training": true
+    }
+  },
+  "EUVP": {
+    "file": "EUVP_OMRR_selected.pth",
+    "bytes": 51641,
+    "sha256": "af5deed0d43ba533c564b2c9c9694bf0b4fa4d64fc29e9c8edfff56af0f99a28",
+    "format": "r27_pnp_omrr_core_v1",
+    "tensor_count": 7,
+    "parameter_count": 11906,
+    "metadata": {
+      "core_parameter_count": 11906,
+      "external_contributors_included": false,
+      "contributor_cardinality_specific": false,
+      "dataset": "EUVP",
+      "epoch": 200,
+      "seed": 3407,
+      "protocol_sha256": "77bfe759bf0a2f3ed2cdb55ea259fd611262f093492d21a5ddaa3773a2b3821d",
+      "profile_sha256": "3140cdfc8822f949e6a3e3f13f0db166d061d4b715d706d1733d4330b72a2fa0",
+      "objective_mode": "balanced",
+      "goal_objective_weight": 0.02,
+      "refinement_gamma": 0.25,
+      "anchor_methods": [
+        "clahe",
+        "unsharp"
+      ],
+      "slot_order": [
+        "clahe",
+        "unsharp",
+        "restormer_woruie",
+        "udcp"
+      ],
+      "test_used": false,
+      "formal_training": true
+    }
+  }
+}

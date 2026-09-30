@@ -1,0 +1,19 @@
+name: ogrr
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.13
+  - pip
+  - numpy
+  - scipy
+  - scikit-image
+  - pandas
+  - tqdm
+  - pillow
+  - pip:
+      - opencv-python-headless>=4.10
+      - einops>=0.8
+      - torch>=2.7
+      - torchvision>=0.22

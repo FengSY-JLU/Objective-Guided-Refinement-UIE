@@ -1,0 +1,21 @@
+{
+  "dataset": "RUIE",
+  "checkpoint": "checkpoints/RUIE_OMRR_selected.pth",
+  "checkpoint_sha256": "47d606e7083023c83152682469bf470020f28af89e0a6bbd88fcef2169c29a56",
+  "objective_mode": "balanced",
+  "goal_kappa": 1.0,
+  "refinement_gamma": 0.25,
+  "anchor_methods": [
+    "clahe",
+    "msrcr"
+  ],
+  "slot_order": [
+    "clahe",
+    "msrcr",
+    "unsharp",
+    "restormer_woruie"
+  ],
+  "selected_epoch": 190,
+  "seed": 3407,
+  "restormer_weight_sha256": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c"
+}

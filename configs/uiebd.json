@@ -1,0 +1,21 @@
+{
+  "dataset": "UIEBD",
+  "checkpoint": "checkpoints/UIEBD_OMRR_selected.pth",
+  "checkpoint_sha256": "1ba5a50f78584ce054f8ad5f10c6a11c517f30fdc2765d5f18ea36a5bb767943",
+  "objective_mode": "balanced",
+  "goal_kappa": 1.0,
+  "refinement_gamma": 0.25,
+  "anchor_methods": [
+    "clahe",
+    "restormer_woruie"
+  ],
+  "slot_order": [
+    "clahe",
+    "unsharp",
+    "grayworld",
+    "restormer_woruie"
+  ],
+  "selected_epoch": 200,
+  "seed": 3407,
+  "restormer_weight_sha256": "b2f6fa945708afff4ba58a1f0a3c4aab95965ef6086d646b3a5d4d6f73f4486c"
+}
