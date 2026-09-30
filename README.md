@@ -10,6 +10,14 @@ Shiyao Feng, Jun-Hong Cui, ChunRu Wan, and Gaochao Xu.
 
 Repository: https://github.com/FengSY-JLU/Objective-Guided-Refinement-UIE
 
+## Overview
+
+<p align="center">
+  <img src="assets/framework_overview.png" width="100%">
+</p>
+
+**Overview.** Frozen restoration outputs first establish a parameter-free synthesis anchor and are then retained as individually queryable post-synthesis correction evidence. OMRR routes these correction directions according to spatial reliability and the requested enhancement objective, followed by output-supported bounded execution.
+
 ## Core idea
 
 The method first establishes a parameter-free synthesis anchor and then retains
